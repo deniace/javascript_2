@@ -3,6 +3,7 @@
 
 // property adalah nilai didalam object
 // method adalah fungsi didalam object
+// Problem nya adalah kurang efektif untuk object dalam jumlah banyak
 
 let mhs = {
     nama: 'Deni Supriyatna',
@@ -72,6 +73,48 @@ function Mobil1(merk, speed, topSpeed){
 }
 
 let ferari = Mobil1('ferary', 0, 200);
+
+
+// membuat object method untuk efisiensi 
+const methodMahasiswa = {
+    makan: function(porsi){
+        this.energi += porsi;
+        console.log(`Hallow ${this.nama}, selamat makan`);
+    },
+    main: function (jam){
+        this.energi-=jam;
+        console.log(`Hallow ${this.nama}, selamat main`);
+    }
+}
+
+/**
+ * object mahasiswa
+ *  kekurangan object ini yaitu jika kita menambah function pada object method maka harus
+ *  ditambah pula atau didaftarkan pada obect mahasiswa
+ * @param {*} nama 
+ * @param {*} energi 
+ */
+function MahasiswaBaru(nama, energi){
+    let mahasiswa = {};
+    mahasiswa.nama = nama;
+    mahasiswa.energi = energi;
+    mahasiswa.makan = methodMahasiswa.makan;
+    mahasiswa.main = methodMahasiswa.main;
+    return mahasiswa;
+}
+
+let mhsBaru1 = MahasiswaBaru('tatang', 19);
+
+// object.create mirip seperti pewarisan pada java OOP
+// pewarisan sifat2 dari parent
+function MahasiswaObjCreate(nama, energi){
+    let mahasiswa = Object.create(methodMahasiswa); // untuk menurunkan sifat dari parent
+    mahasiswa.nama = nama;
+    mahasiswa.energi = energi;
+    return mahasiswa;
+}
+
+let mhsObjCreate = MahasiswaObjCreate('nana', 100);
 
 // 3. Object Constructor
 // menggunakan keyword new
