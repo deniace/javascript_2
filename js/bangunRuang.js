@@ -67,3 +67,60 @@ buttonHitung.addEventListener('click', function(){
     let luas = p * a / 2;
     divHasil.innerHTML = "<p>Luas segitiga dengan panjang " + p + " dan alas " + a + " adalah = " + luas + "</p>";
 });
+
+// membuat h2 persegi panjang
+const h2PersegiPanjang = document.createElement('h2');
+const textH2PersegiPanjang = document.createTextNode('Persegi Panjang');
+h2PersegiPanjang.appendChild(textH2PersegiPanjang);
+
+root.appendChild(h2PersegiPanjang);
+
+// bikin label panjang
+const labelPanjangPersegi = document.createElement('label');
+labelPanjangPersegi.setAttribute('for', 'panjangPersegi');
+const textLabelPanjangPersegi = document.createTextNode('Masukan Panjang');
+labelPanjangPersegi.appendChild(textLabelPanjangPersegi);
+root.appendChild(labelPanjangPersegi)
+
+// bikin input element
+const inputPanjangPersegi = document.createElement('input');
+inputPanjangPersegi.setAttribute('type', 'number');
+inputPanjangPersegi.setAttribute('name', 'panjang');
+inputPanjangPersegi.id = "panjangPersegi";
+root.appendChild(inputPanjangPersegi);
+
+// membuat br
+root.appendChild(document.createElement('br'));
+
+// bikin label lebar
+const labelLebarPersegi = document.createElement('label');
+labelLebarPersegi.setAttribute('for', 'lebarPersegi');
+const textLabelLebarPersegi = document.createTextNode('Lebar Persegi');
+labelLebarPersegi.appendChild(textLabelLebarPersegi);
+root.appendChild(labelLebarPersegi);
+
+// bikin input
+const inputLebarPersegi = document.createElement('input');
+inputLebarPersegi.setAttribute('type', 'number');
+inputLebarPersegi.id  = "inputLebarPersegi";
+root.appendChild(inputLebarPersegi);
+
+// create br
+root.appendChild(document.createElement('br'));
+
+// btn hitung
+const btnHitungPersegi = document.createElement('button');
+const textBtnHitungPersegi = document.createTextNode('Hitung');
+btnHitungPersegi.appendChild(textBtnHitungPersegi);
+root.appendChild(btnHitungPersegi);
+
+// membuat div hsil
+const hasilPersegi = document.createElement('div');
+root.appendChild(hasilPersegi);
+
+btnHitungPersegi.addEventListener('click', function(){ 
+    let p = inputPanjangPersegi.value;
+    let l = inputLebarPersegi.value;
+    let luasPErsegi = p * l;
+    hasilPersegi.innerHTML = `luas dari peresgi panjang adalah ${luasPErsegi}`;
+});
