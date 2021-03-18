@@ -158,4 +158,49 @@ function mhsProto(nama,enerty){
     this.energi = enerty;
 }
 
-mhsProto.prototype = function(){}
+mhsProto.prototype.makan = function(porsi){
+    this.energi += porsi;
+    return `hallow ${this.nama}, selamat makan`;
+}
+
+mhsProto.prototype.tidur = function(jam){
+    this.energi += jam * 2;
+    return `hallow ${this.nama}, selamat tidur`
+}
+
+mhsProto.prototype.main = function(jam){
+    this.energi -= jam;
+    return `hallo ${this.nama}, selamat main`;
+}
+
+// pemangilan nya menggunakan new
+let mhsProto1 = new mhsProto('deni', 12);
+
+let aa =  new mhsProto("a", 1);
+
+
+
+// latihan class
+// class itu di belakang layar menjalankan prototype
+class MahasiswaClass{
+    constructor(nama, energi){
+        this.nama = nama;
+        this.energi = energi;
+    }
+
+    // membuat fungi tidak perlu lagi pake keyword function
+
+    makan(porsi){
+        this.energi += porsi;
+        return `hello ${this.nama}, selamat makan`
+    }
+
+    main(jam){
+        this.energi -= jam;
+        return `hellow ${this.nama}, selamat main`
+    }
+}
+
+let testClass = new MahasiswaClass("bbb", 40);
+
+
