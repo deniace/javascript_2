@@ -150,3 +150,12 @@ function Mobil2(merk, speed){
 }
 
 let supra = new Mobil2('supra', 40);
+
+// prototipe
+// let this = Object.create(mhsProto.prototype); // dibelakang layar ini
+function mhsProto(nama,enerty){
+    this.nama = nama;
+    this.energi = enerty;
+}
+
+mhsProto.prototype = function(){}
