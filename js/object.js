@@ -1,3 +1,6 @@
+// Deni Supriyatna / Deni Ace 
+// denisupriyatna01@gmail.com
+
 // membuat object pada javascript
 // 1. Object literal 
 
