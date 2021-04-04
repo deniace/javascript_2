@@ -55,6 +55,9 @@ console.log("pake map");
 const mhs2 = [...liMhs].map(l => l.textContent);
 console.log(mhs2);
 
+const mhs3 = [...liMhs];
+console.log(mhs3);
+
 const nama = document.querySelector(".nama");
 console.log(nama);
 
