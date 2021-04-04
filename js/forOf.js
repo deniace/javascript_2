@@ -1,4 +1,10 @@
 // for ..of
+// creates a loop iterating over iterable object
+// bisa mengulang atau menelusuri object2 yang iterable
+// macam macam iteable object 
+// String, array, arguments/nodelist, typedarray, map, sed dan user defined iterable
+
+// array
 const mhs = ['deni', 'ace', 'susu'];
 
 // for
@@ -110,3 +116,4 @@ for (m in mobil) {
     // key dan value
     console.log(`key = ${m}, value = ${mobil[m]}`);
 }
+console.log(mobil.nama);
