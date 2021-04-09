@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan callback Movie | Deni ace</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5 ">
+            <div class="col">
+                <h1>Callback Movie Deni Ace</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control input-keyword" placeholder="Search Movie...">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary search-button" type="button">Search Movie</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row movie-container">
+            <div class="col-md-5 my-3">
+                <div class="card">
+                    <img src="" class="card-img-top" alt="Poster film">
+                    <div class="card-body">
+                        <h5 class="card-title">Avenger</h5>
+                        <h6 class="card-subtitle md-2 text-muted">2016</h6>
+                        <a href="#" class="btn btn-primary">Show Deetails</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- awal modal -->
+    <div class="modal fade" id="movieDetailModal" tabindex="-1" aria-labelledby="movieDetailModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="movieDetailModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- akhir modal -->
+
+
+
+    <script src="./plugin/jquery-3.6.0.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="./js/callbackMovie.js"></script>
+</body>
+
+</html>
